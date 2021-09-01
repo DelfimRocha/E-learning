@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_elearning_program" model="ir.actions.act_window">
+        <field name="name">Program</field>
+        <field name="res_model">elearning.course.program</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a program
+            </p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_form_elearning_program">
+        <field name="name">CourseProgram.form</field>
+        <field name="model">elearning.course.program</field>
+        <field name="view_type">form</field>
+        <field name="arch" type="xml">
+            <form string="menu">
+                <sheet>
+
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name" placeholder="Name Program"/>
+                    </h1>
+
+                    <group string="" col="4" colspan="2">
+
+                        <field name="media_type"/>
+                        <field name="media_url"/>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Course">
+                            <field name="course"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_program_course">
+        <field name="name">CourseProgram.tree</field>
+        <field name="model">elearning.course.program</field>
+        <field name="view_type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="menu">
+                <field name="name"/>
+                <field name="media_type"/>
+                <field name="media_url"/>
+            </tree>
+        </field>
+    </record>
+    <menuitem id="program_menu" name="Program"
+              parent="main_elearning_menu"/>
+    <menuitem id="course_program_menu" name="Programs"
+              parent="elearning_menu"
+              action="action_elearning_program"/>
+</odoo>

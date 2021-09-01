@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_elearning_enrolment" model="ir.actions.act_window">
+        <field name="name">Enrolment</field>
+        <field name="res_model">elearning.enrolment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a enrolment
+            </p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_form_elearning_enrolment">
+        <field name="name">ElearningEnrolment.form</field>
+        <field name="model">elearning.enrolment</field>
+        <field name="view_type">form</field>
+        <field name="arch" type="xml">
+            <form string="menu">
+                 <header>
+                        <button string="Start course" type="object" name="started_progressbar" states="cancel" class="btn-primary" attrs="{'invisible': [('state','=','started')]}"/>
+                        <button string="In progress" type="object" name="progress_progressbar" states="cancel,finished" attrs="{'invisible': [('state','=','progress')]}"/>
+                        <button string="Finished" type="object" name="done_progressbar" states="new,progress,cancel" attrs="{'invisible': [('state','=','finished')]}"/>
+                        <button string="Cancel" type="object" name="cancel_progressbar" states="new,progress,finished" attrs="{'invisible': [('state','=','cancel')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="New,progress,finished"/>
+                    </header>
+                <sheet>
+                    <group string=" Course Enrolment">
+                        <field name="name"/>
+                        <field name="user_id"/>
+                        <field name="course_id"/>
+                        <field name="data_enrolment"  readonly="1"/>
+                        <field name="data_completion"/>
+                       <!-- <field name="state"/> -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_enrolment">
+        <field name="name">ElearningEnrolment.tree</field>
+        <field name="model">elearning.enrolment</field>
+        <field name="view_type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="menu">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="course_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <menuitem id="enrolment_menu" name="Enrolment"
+              parent="main_elearning_menu"/>
+    <menuitem id="elearning_enrolment_menu" name="Enrolments"
+              parent="instructor_menu"
+              action="action_elearning_enrolment"/>
+</odoo>

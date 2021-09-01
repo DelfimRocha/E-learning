@@ -1,0 +1,16 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<record model="ir.actions.act_window" id="employee_list_action">
+        <field name="name">Employees</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+ <menuitem id="contact_menu" name="Contacts"
+              parent="main_risk_case_menu" sequence="11"/>
+    <menuitem id="employee_menu" name="Employees"
+              sequence="101"
+              parent="contact_menu"
+              action="employee_list_action"/>
+
+</odoo>

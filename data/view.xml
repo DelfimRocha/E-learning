@@ -1,0 +1,9 @@
+<odoo>
+    <record id="courses_page_link" model="website.menu">
+        <field name="name">My Courses</field>
+        <field name="page_id" ref="courses_page"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">99</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_e_learning" model="ir.actions.act_window">
+        <field name="name">E learning</field>
+        <field name="res_model">learning.course</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a course
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_e_learning">
+        <field name="name">Course.form</field>
+        <field name="model">learning.course</field>
+        <field name="view_type">form</field>
+        <field name="arch" type="xml">
+            <form string="menu">
+
+                <sheet>
+                    <group>
+
+                        <field name="course_name" placeholder=""/>
+                        <field name="course_version" placeholder=""/>
+
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="course_description" placeholder=""/>
+
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+
+
+            </form>
+        </field>
+    </record>
+
+    # Vista Tree
+
+    <record model="ir.ui.view" id="view_e_learning">
+        <field name="name">Course.tree</field>
+        <field name="model">learning.course</field>
+        <field name="view_type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="menu">
+
+
+            </tree>
+        </field>
+    </record>
+
+
+    <menuitem name="E-learning" id="main_e_learning_menu" sequence="0"/>
+    <menuitem name="E-Learning" id="e_learning_menu" parent="main_e_learning_menu" sequence="10"/>
+    <menuitem name="Course" id="learning_menu" parent="e_learning_menu" action="action_e_learning" sequence="100"/>
+</odoo>

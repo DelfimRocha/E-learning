@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_elearning_student" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="res_model">elearning.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a student
+            </p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_form_elearning_student">
+        <field name="name">ElearningStudent.form</field>
+        <field name="model">elearning.student</field>
+        <field name="view_type">form</field>
+        <field name="arch" type="xml">
+            <form string="menu">
+                <sheet>
+                    <group string="" col="4" colspan="2">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Name Student"/>
+                        </h1>
+                        <field name="image" widget='image' class="oe_avatar"
+                                options='{ "size": [90, 90]}'/>
+                    </group>
+
+                    <group>
+                        <field name="street"/>
+                        <field name="city"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                    </group>
+                    <notebook>
+                        <page string="Other information">
+                            <group>
+                                <field name="user_id"/>
+                                <field name="partner_id"/>
+                            </group>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_student">
+        <field name="name">ElearningStudent.tree</field>
+        <field name="model">elearning.student</field>
+        <field name="view_type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="menu">
+                <field name="name"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+    <menuitem id="student_menu" name="Student"
+              parent="main_elearning_menu"/>
+    <menuitem id="elearning_student_menu" name="Students"
+              parent="elearning_menu"
+              action="action_elearning_student"/>
+</odoo>

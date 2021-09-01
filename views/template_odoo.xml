@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="odoo_template">
+
+            <t t-call="website.layout">
+                <div id="wrap">
+
+                    <div class="container">
+                        <link href="e-learning/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+                        <link href="e-learning/static/src/css/4-col-portfolio.css" rel="stylesheet"/>
+                        <link href="e-learning/static/src/css/shop-item.css" rel="stylesheet"/>
+                        <!-- Page Heading -->
+                        <div class="container">
+
+                            <div class="row">
+
+                                <!--<div class="col-lg-3">
+                                  <h3 class="my-4">Complete Course of Python</h3>
+                                  <div class="list-group">
+                                    <a href="#" class="list-group-item active">Category 1</a>
+                                    <a href="#" class="list-group-item">Category 2</a>
+                                    <a href="#" class="list-group-item">Category 3</a>
+                                  </div>
+                                </div>-->
+                                <!-- /.col-lg-3 -->
+
+                                <div class="col-lg-12">
+
+                                    <div class="card mt-4">
+                                        <img class="card-img-top img-fluid"
+                                             src="e-learning/static/src/img/curso2.jpg" alt=""/>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Mastering Odoo v11.0 Development</h3>
+                                            <p class="card-text">
+                                                Odoo is a modern ERP system released under AGPL license, and it
+                                                offers HR, CRM, Project Management, Sales, Purchases, Inventory
+                                                Management, Accounting, .....
+
+                                                Odoo is based on Open Object ( A smart Open Source Professional
+                                                Rapid Application Development Framework in Python).
+                                            </p>
+                                            <button type="button" class="btn btn-warning">continue the session
+                                            </button>
+                                            <hr/>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                     role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                                                     aria-valuemax="100" style="width: 65%"></div>
+                                            </div>
+                                            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;
+                                            </span>
+                                            4.0 stars
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="card card-outline-secondary my-4">
+                                        <div class="card-header">
+                                            Course program
+                                            <small class="text-muted">Total videos: 9/15</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- <p><img class="glyph-icon svg" src="C:\xampp\htdocs\e-learning\images\si-glyph-circle-triangle-right.svg"/>
+                                               </p>-->
+
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Introduction 4:35
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Installation 06:45
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Basics 32:00
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/quiz.png"/>
+                                                Quiz
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Creating a module 07:35
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Adding fileds 05:45
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/quiz.png"/>
+                                                Quiz
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Creating Class 08:35
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Adding a form view 05:15
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Adding a tree view 06:45
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Adding a graphs view 04:45
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/circle.png"/>
+                                                Adding a kanban view 08:45
+                                            </span>
+                                            <hr/>
+                                            <span>
+                                                <img src="e-learning/static/src/img/quiz.png"/>
+                                                final Quiz
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Frequently asked questions</h5>
+                                                    <hr/>
+                                                    <p class="card-text">With supporting text below as a natural
+                                                        lead-in to additional content.
+                                                    </p>
+                                                    <hr/>
+                                                    <p class="card-text">With supporting text below as a natural
+                                                        lead-in to additional content.
+                                                    </p>
+                                                    <hr/>
+                                                    <div class="card-body">
+                                                        <a href="#" class="card-link">Sell all</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Recent Instructor Announcements</h5>
+                                                    <hr/>
+                                                    <p class="card-text">With supporting text below as a natural
+                                                        lead-in to additional content.
+                                                    </p>
+                                                    <hr/>
+                                                    <p class="card-text">With supporting text below as a natural
+                                                        lead-in to additional content.
+                                                    </p>
+                                                    <hr/>
+                                                    <div class="card-body">
+                                                        <a href="#" class="card-link">Sell all</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card card-outline-secondary my-4">
+                                        <div class="card-header">
+                                            Course Reviews
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                                enim aperiam inventore, similique necessitatibus neque non!
+                                                Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                                mollitia, necessitatibus quae sint natus.
+                                            </p>
+                                            <small class="text-muted">Posted by Anonymous on 3/1/18</small>
+                                            <hr/>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                                enim aperiam inventore, similique necessitatibus neque non!
+                                                Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                                mollitia, necessitatibus quae sint natus.
+                                            </p>
+                                            <small class="text-muted">Posted by Anonymous on 3/5/18</small>
+                                            <hr/>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                                enim aperiam inventore, similique necessitatibus neque non!
+                                                Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                                mollitia, necessitatibus quae sint natus.
+                                            </p>
+                                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                                            <hr/>
+                                            <a href="#" class="btn btn-success">Leave a Review</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+
+                                </div>
+                                <!-- /.col-lg-9 -->
+
+                            </div>
+
+                        </div>
+
+                        <!-- === Snippets' area === -->
+                        <div class="oe_structure"/>
+                        <script src="e-learning/static/src/js/jquery.min.js"></script>
+                        <script src="e-learning/static/src/js/bootstrap.bundle.min.js"></script>
+                    </div>
+                </div>
+            </t>
+    </template>
+    <record id="course_odoo" model="website.page">
+         <field name="name">Mastering Odoo v11.0 Development</field>
+        <field name="website_published">True</field>
+        <field name="url">/courses/odoo</field>
+        <field name="type">qweb</field>
+        <field name="view_id" ref="odoo_template"/>
+
+    </record>
+</odoo>

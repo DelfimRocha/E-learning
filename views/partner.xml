@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    # Do not use
+    <!-- Add instructor field to existing view -->
+    <!--<record model="ir.ui.view" id="partner_employee_form_view">-->
+        <!--<field name="name">partner.instructor</field>-->
+        <!--<field name="model">res.partner</field>-->
+        <!--<field name="inherit_id" ref="base.view_partner_form"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<notebook position="inside">-->
+                <!--<page string="Risk Cases">-->
+                    <!--<group>-->
+                        <!--<field name="instructor"/>-->
+                        <!--<field name="model_id"/>-->
+                    <!--</group>-->
+                <!--</page>-->
+            <!--</notebook>-->
+        <!--</field>-->
+    <!--</record>-->
+<!--
+    <record model="ir.actions.act_window" id="employee_list_action">
+        <field name="name">Employees</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="contact_menu" name="Contacts"
+              parent="main_risk_case_menu"/>
+    <menuitem id="employee_menu" name="Employees"
+              parent="contact_menu"
+              action="employee_list_action"/>
+
+
+</odoo>

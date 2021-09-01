@@ -1,0 +1,217 @@
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Course">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/e-learning/static/src/css/course_layout.css"/>
+
+        </xpath>
+    </template>
+
+    <template id="courses_template">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div t-foreach="courses" t-as="course" class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                            <div class="card h-100">
+                                <a t-attf-href="/elearning/courses/#{course.id}">
+                                    <span t-field="course.image" t-options="{'widget': 'image'}" class="card-img-top"/>
+                                </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a t-attf-href="/elearning/courses/#{course.id}">
+                                            <span t-esc="course.course_name"/>
+                                        </a>
+                                    </h4>
+                                    <p class="card-text">
+                                        <t t-esc="course.course_description"/>
+                                    </p>
+                                </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                         role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 10%"></div>
+                                </div>
+                                <span class="text-warning">&#9734; &#9734; &#9734; &#9734; &#9734;</span>
+                                0.0 stars
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- Pagination -->
+
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- === Snippets' area === -->
+                    <div class="oe_structure"/>
+
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="program_template">
+        <t t-call="website.layout">
+            <div id="wrap">
+
+                <!-- Page Heading -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mt-4">
+                                <!--    <span class="card-img-top img-fluid"
+                                        t-field="course.image" t-options="{'widget': 'image'}"/>-->
+                                <div class="card-body">
+                                    <h2 class="card-title">
+                                        <!--   <t t-esc="info.course_name"/>-->
+                                    </h2>
+                                    <h4 class="card-text">
+                                        <!--  <t t-esc="info.course_description"/>-->
+                                    </h4>
+                                    <button type="button" class="btn btn-warning">continue the session
+                                    </button>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                         role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 0%"></div>
+                                </div>
+                                <span class="text-warning">&#9734; &#9734; &#9734; &#9734; &#9734;
+                                </span>
+                                0.0 stars
+                            </div>
+                            <!-- /.card -->
+
+                            <div class="card card-outline-secondary my-4">
+                                <div class="card-header">
+                                    Course program Total videos
+                                </div>
+                                <div t-foreach="programs" t-as="program" class="card-body">
+                                    <h5 herf="#">
+                                        <span t-esc="program.name" src="e-learning/static/src/img/circle.png"/>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Frequently asked questions</h4>
+                                            <hr/>
+                                            <h5 class="card-text">With supporting text below as a natural
+                                                lead-in to additional content.
+                                            </h5>
+                                            <hr/>
+                                            <h5 class="card-text">With supporting text below as a natural
+                                                lead-in to additional content.
+                                            </h5>
+                                            <hr/>
+                                            <div class="card-body">
+                                                <a href="#" class="card-link">Sell all</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Recent Instructor Announcements</h4>
+                                            <hr/>
+                                            <p class="card-text">With supporting text below as a natural
+                                                lead-in to additional content.
+                                            </p>
+                                            <hr/>
+                                            <p class="card-text">With supporting text below as a natural
+                                                lead-in to additional content.
+                                            </p>
+                                            <hr/>
+                                            <div class="card-body">
+                                                <a href="#" class="card-link">Sell all</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-outline-secondary my-4">
+                                <div class="card-header">
+                                    Course Reviews
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                        enim aperiam inventore, similique necessitatibus neque non!
+                                        Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                        mollitia, necessitatibus quae sint natus.
+                                    </p>
+                                    <small class="text-muted">Posted by Anonymous on 3/1/18</small>
+                                    <hr/>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                        enim aperiam inventore, similique necessitatibus neque non!
+                                        Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                        mollitia, necessitatibus quae sint natus.
+                                    </p>
+                                    <small class="text-muted">Posted by Anonymous on 3/5/18</small>
+                                    <hr/>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+                                        enim aperiam inventore, similique necessitatibus neque non!
+                                        Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+                                        mollitia, necessitatibus quae sint natus.
+                                    </p>
+                                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                                    <hr/>
+                                    <a href="#" class="btn btn-success">Leave a Review</a>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col-lg-9 -->
+                    </div>
+
+                    <!-- === Snippets' area === -->
+                    <div class="oe_structure"/>
+
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="program_page" model="website.page">
+        <field name="name">Program</field>
+        <field name="website_published">True</field>
+        <field name="url">elearning/courses/program</field>
+        <field name="type">qweb</field>
+        <field name="view_id" ref="program_template"/>
+    </record>
+    <record id="courses_page" model="website.page">
+        <field name="name">My Courses</field>
+        <field name="website_published">True</field>
+        <field name="url">/elearning/courses</field>
+        <field name="type">qweb</field>
+        <field name="view_id" ref="courses_template"/>
+    </record>
+</odoo>

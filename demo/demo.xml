@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <record id="sql" model="elearning.course">
+        <field name="course_name"> </field>
+        <field name="course_version"> </field>
+    </record>
+
+</odoo>
